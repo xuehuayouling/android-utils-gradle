@@ -17,9 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by NeXT on 15-7-29.
- */
 public class TagCloudView extends ViewGroup {
 
 	private static final String TAG = TagCloudView.class.getSimpleName();
@@ -116,12 +113,6 @@ public class TagCloudView extends ViewGroup {
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
 	}
 
-	/**
-	 * 计算 ChildView 宽高
-	 * 
-	 * @param widthMeasureSpec
-	 * @param heightMeasureSpec
-	 */
 	@SuppressLint("DrawAllocation")
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -154,12 +145,6 @@ public class TagCloudView extends ViewGroup {
 
 	}
 
-	/**
-	 * 初始化 singleLine 模式需要的视图
-	 * 
-	 * @param widthMeasureSpec
-	 * @param heightMeasureSpec
-	 */
 	private void initSingleLineView(int widthMeasureSpec, int heightMeasureSpec) {
 		if (!mSingleLine) {
 			return;
@@ -202,13 +187,6 @@ public class TagCloudView extends ViewGroup {
 		}
 	}
 
-	/**
-	 * 为 singleLine 模式布局，并计算视图高度
-	 * 
-	 * @param totalWidth
-	 * @param totalHeight
-	 * @return
-	 */
 	private int getSingleTotalHeight(int totalWidth, int totalHeight) {
 		int childWidth;
 		int childHeight;
@@ -259,13 +237,6 @@ public class TagCloudView extends ViewGroup {
 		return totalHeight;
 	}
 
-	/**
-	 * 为 multiLine 模式布局，并计算视图高度
-	 * 
-	 * @param totalWidth
-	 * @param totalHeight
-	 * @return
-	 */
 	private int getMultiTotalHeight(int totalWidth, int totalHeight) {
 		int childWidth;
 		int childHeight;

@@ -11,13 +11,6 @@ import android.view.animation.RotateAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * The footer view for {@link com.markmao.pulltorefresh.widget.XListView} and
- * {@link com.markmao.pulltorefresh.widget.XScrollView}
- *
- * @author markmjw
- * @date 2013-10-08
- */
 public class XFooterView extends LinearLayout {
     public final static int STATE_NORMAL = 0;
     public final static int STATE_READY = 1;
@@ -69,15 +62,6 @@ public class XFooterView extends LinearLayout {
         mRotateDownAnim.setFillAfter(true);
     }
 
-    /**
-     * Set footer view state
-     *
-     * @see #STATE_LOADING
-     * @see #STATE_NORMAL
-     * @see #STATE_READY
-     *
-     * @param state
-     */
     public void setState(int state) {
         if (state == mState) return;
 
@@ -118,11 +102,6 @@ public class XFooterView extends LinearLayout {
         mState = state;
     }
 
-    /**
-     * Set footer view bottom margin.
-     *
-     * @param margin
-     */
     public void setBottomMargin(int margin) {
         if (margin < 0) return;
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
@@ -130,44 +109,27 @@ public class XFooterView extends LinearLayout {
         mLayout.setLayoutParams(lp);
     }
 
-    /**
-     * Get footer view bottom margin.
-     *
-     * @return
-     */
     public int getBottomMargin() {
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
         return lp.bottomMargin;
     }
 
-    /**
-     * normal status
-     */
     public void normal() {
         mHintView.setVisibility(View.VISIBLE);
         mProgressBar.setVisibility(View.GONE);
     }
 
-    /**
-     * loading status
-     */
     public void loading() {
         mHintView.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
     }
 
-    /**
-     * hide footer when disable pull load more
-     */
     public void hide() {
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
         lp.height = 0;
         mLayout.setLayoutParams(lp);
     }
 
-    /**
-     * show footer
-     */
     public void show() {
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mLayout.getLayoutParams();
         lp.height = LayoutParams.WRAP_CONTENT;

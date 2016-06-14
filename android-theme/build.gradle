@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 // 这个version是library的版本，更新后也需要更改这个值
-version = "0.0.1"
+version = "0.0.2"
 
 android {
     compileSdkVersion 23
@@ -27,8 +27,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-def siteUrl = 'https://github.com/xuehuayouling/android-utils'// 项目的主页
-def gitUrl = 'https://github.com/xuehuayouling/android-utils.git'// Git仓库的url
+def siteUrl = 'https://github.com/xuehuayouling/android-utils-gradle'// 项目的主页
+def gitUrl = 'https://github.com/xuehuayouling/android-utils-gradle.git'// Git仓库的url
 group = "com.android.ysq.theme" // Maven Group ID for the artifact，
 install {
     repositories.mavenInstaller {

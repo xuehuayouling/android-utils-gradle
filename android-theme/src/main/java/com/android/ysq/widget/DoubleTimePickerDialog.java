@@ -27,28 +27,10 @@ public class DoubleTimePickerDialog extends AlertDialog implements OnClickListen
 	 */
 	public interface OnTimeSetListener {
 
-		/**
-		 * @param startTimePicker
-		 * @param startHourOfDay
-		 * @param startMinute
-		 * @param endTimePicker
-		 * @param endHourOfDay
-		 * @param endMinute
-		 */
 		void onTimeSet(TimePicker startTimePicker, int startHourOfDay, int startMinute, TimePicker endTimePicker,
 				int endHourOfDay, int endMinute);
 	}
 
-	/**
-	 * @param context
-	 * @param theme
-	 * @param callBack
-	 * @param startHourOfDay
-	 * @param startMinute
-	 * @param endHourOfDay
-	 * @param endMinute
-	 * @param is24HourView
-	 */
 	public DoubleTimePickerDialog(Context context, int theme, OnTimeSetListener callBack, int startHourOfDay,
 			int startMinute, int endHourOfDay, int endMinute, Boolean is24HourView) {
 		super(context, theme);

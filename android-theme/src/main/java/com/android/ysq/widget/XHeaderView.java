@@ -14,13 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-/**
- * The header view for {@link com.markmao.pulltorefresh.widget.XListView} and
- * {@link com.markmao.pulltorefresh.widget.XScrollView}
- *
- * @author markmjw
- * @date 2013-10-08
- */
 public class XHeaderView extends LinearLayout {
     public final static int STATE_NORMAL = 0;
     public final static int STATE_READY = 1;
@@ -124,11 +117,6 @@ public class XHeaderView extends LinearLayout {
         mState = state;
     }
 
-    /**
-     * Set the header view visible height.
-     *
-     * @param height
-     */
     public void setVisibleHeight(int height) {
         if (height < 0) height = 0;
         LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mContainer.getLayoutParams();
@@ -136,11 +124,6 @@ public class XHeaderView extends LinearLayout {
         mContainer.setLayoutParams(lp);
     }
 
-    /**
-     * Get the header view visible height.
-     *
-     * @return
-     */
     public int getVisibleHeight() {
         return mContainer.getHeight();
     }

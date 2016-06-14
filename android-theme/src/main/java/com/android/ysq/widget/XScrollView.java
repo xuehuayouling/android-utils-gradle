@@ -21,13 +21,6 @@ import android.widget.ScrollView;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-/**
- * XScrollView, modified from {@link com.markmao.pulltorefresh.widget.XListView}
- *
- * @author markmjw
- * @date 2013-10-08
- * @see com.markmao.pulltorefresh.widget.XListView
- */
 public class XScrollView extends ScrollView implements OnScrollListener {
 //    private static final String TAG = "XScrollView";
 
@@ -135,11 +128,6 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         this.addView(mLayout);
     }
 
-    /**
-     * Set the content ViewGroup for XScrollView.
-     *
-     * @param content
-     */
     public void setContentView(ViewGroup content) {
         if (mLayout == null) {
             return;
@@ -155,11 +143,6 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         mContentLayout.addView(content);
     }
 
-    /**
-     * Set the content View for XScrollView.
-     *
-     * @param content
-     */
     public void setView(View content) {
         if (mLayout == null) {
             return;
@@ -171,11 +154,6 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         mContentLayout.addView(content);
     }
 
-    /**
-     * Enable or disable pull down refresh feature.
-     *
-     * @param enable
-     */
     public void setPullRefreshEnable(boolean enable) {
         mEnablePullRefresh = enable;
 
@@ -183,11 +161,6 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         mHeaderContent.setVisibility(enable ? View.VISIBLE : View.INVISIBLE);
     }
 
-    /**
-     * Enable or disable pull up load more feature.
-     *
-     * @param enable
-     */
     public void setPullLoadEnable(boolean enable) {
         mEnablePullLoad = enable;
 
@@ -212,18 +185,10 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         }
     }
 
-    /**
-     * Enable or disable auto load more feature when scroll to bottom.
-     *
-     * @param enable
-     */
     public void setAutoLoadEnable(boolean enable) {
         mEnableAutoLoad = enable;
     }
 
-    /**
-     * Stop refresh, reset header view.
-     */
     public void stopRefresh() {
         if (mPullRefreshing) {
             mPullRefreshing = false;
@@ -231,9 +196,6 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         }
     }
 
-    /**
-     * Stop load more, reset footer view.
-     */
     public void stopLoadMore() {
         if (mPullLoading) {
             mPullLoading = false;
@@ -241,27 +203,14 @@ public class XScrollView extends ScrollView implements OnScrollListener {
         }
     }
 
-    /**
-     * Set last refresh time
-     *
-     * @param time
-     */
     public void setRefreshTime(String time) {
         mHeaderTime.setText(time);
     }
 
-    /**
-     * Set listener.
-     *
-     * @param listener
-     */
     public void setIXScrollViewListener(IXScrollViewListener listener) {
         mListener = listener;
     }
 
-    /**
-     * Auto call back refresh.
-     */
     public void autoRefresh() {
         mHeader.setVisibleHeight(mHeaderHeight);
 

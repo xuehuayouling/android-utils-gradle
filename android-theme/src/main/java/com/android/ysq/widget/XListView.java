@@ -21,12 +21,6 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-/**
- * XListView, it's based on <a href="https://github.com/Maxwin-z/XListView-Android">XListView(Maxwin)</a>
- *
- * @author markmjw
- * @date 2013-10-08
- */
 public class XListView extends ListView implements OnScrollListener {
 //    private static final String TAG = "XListView";
 
@@ -140,11 +134,6 @@ public class XListView extends ListView implements OnScrollListener {
         super.setAdapter(adapter);
     }
 
-    /**
-     * Enable or disable pull down refresh feature.
-     *
-     * @param enable
-     */
     public void setPullRefreshEnable(boolean enable) {
         mEnablePullRefresh = enable;
 
@@ -152,11 +141,6 @@ public class XListView extends ListView implements OnScrollListener {
         mHeaderContent.setVisibility(enable ? View.VISIBLE : View.INVISIBLE);
     }
 
-    /**
-     * Enable or disable pull up load more feature.
-     *
-     * @param enable
-     */
     public void setPullLoadEnable(boolean enable) {
         mEnablePullLoad = enable;
 
@@ -181,18 +165,10 @@ public class XListView extends ListView implements OnScrollListener {
         }
     }
 
-    /**
-     * Enable or disable auto load more feature when scroll to bottom.
-     *
-     * @param enable
-     */
     public void setAutoLoadEnable(boolean enable) {
         mEnableAutoLoad = enable;
     }
 
-    /**
-     * Stop refresh, reset header view.
-     */
     public void stopRefresh() {
         if (mPullRefreshing) {
             mPullRefreshing = false;
@@ -200,9 +176,6 @@ public class XListView extends ListView implements OnScrollListener {
         }
     }
 
-    /**
-     * Stop load more, reset footer view.
-     */
     public void stopLoadMore() {
         if (mPullLoading) {
             mPullLoading = false;
@@ -210,27 +183,14 @@ public class XListView extends ListView implements OnScrollListener {
         }
     }
 
-    /**
-     * Set last refresh time
-     *
-     * @param time
-     */
     public void setRefreshTime(String time) {
         mHeaderTime.setText(time);
     }
 
-    /**
-     * Set listener.
-     *
-     * @param listener
-     */
     public void setXListViewListener(IXListViewListener listener) {
         mListener = listener;
     }
 
-    /**
-     * Auto call back refresh.
-     */
     public void autoRefresh() {
         mHeader.setVisibleHeight(mHeaderHeight);
 
