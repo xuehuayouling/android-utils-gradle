@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 // 这个version是library的版本，更新后也需要更改这个值
-version = "0.0.8"
+version = "0.0.12"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -25,9 +25,13 @@ android {
 
 }
 
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'org.greenrobot:greendao:2.2.0'
 }
 
 def siteUrl = 'https://github.com/xuehuayouling/android-utils-gradle'// 项目的主页
