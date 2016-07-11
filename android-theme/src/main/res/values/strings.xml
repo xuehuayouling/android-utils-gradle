@@ -14,4 +14,5 @@
     <string name="cancel">取消</string>
     <string name="prepare_record">准备录音</string>
     <string name="are_you_sure_abandon_current_record">确认放弃本次录音吗?</string>
+    <string name="choice">选择</string>
 </resources>
